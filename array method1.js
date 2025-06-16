@@ -14,4 +14,6 @@ console.log(vehicles);
 
 //delete vehicle array
 delete vehicles[2]
+vehicles.reverse();
+
 console.log(vehicles)

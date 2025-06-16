@@ -1,5 +1,4 @@
-let fruits  = ["apple", "banana", "cherry", "woodapple", "orange", "pineapple", "grape", "kiwi", "mango", "papaya"];
-var vehicles = [];
+
 
 console.log(fruits);
 fruits.pop();
