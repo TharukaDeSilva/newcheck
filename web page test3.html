@@ -20,6 +20,33 @@
             background-color: lightblue;
             padding-left: 20px;
         }
+        td:hover , li:hover {
+            background-color: lightgreen;
+            color: red;
+            
+        }
+
+        .ls3:hover {
+            list-style-type: square;
+        
+        }
+        .nav{
+            list-style-type: none;
+            overflow: hidden;
+           /* background-color: green; */
+        }
+
+        .nav li{
+            float: left;
+            width: calc(100% / 3);
+            text-align: center;
+        }
+        .inter-data {
+            font-weight: bold;
+            background-color: lightyellow;
+            width: 60%;
+            border: 2px dotted blue;
+        }
 
     </style>
 </head>
@@ -28,7 +55,16 @@
         <h1>Table and List Testing</h1>
     </header>
     <main>
-        <article class="tab">
+
+
+        <ul class="nav">
+            <li>Home</li>
+            <li><a href="#table">Table</a></li>
+            <li><a href="#list">List</a></li>
+        </ul>
+
+
+        <article class="tab" id="table">
             <h2>Table</h2>
             <table>
                 <thead>
@@ -40,7 +76,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Alice</td>
+                        <td style="color: red; background-color: wheat;">Alice</td>
                         <td>30</td>
                         <td>New York</td>
                     </tr>
@@ -57,17 +93,37 @@
                 </tbody>
             </table>
         </article>
-        <article>
+
+<article >
+<h4>
+    Descriptive lists
+</h4>
+
+<dl class="inter-data">
+    <dt>HTML</dt>
+    <dd>Hyper text markup Language</dd>
+    <dt>java Script</dt>
+    <dd>Java is the another programming language mostly based on the web base developmets.</dd>
+
+</dl>
+</article>
+
+
+
+
+
+
+        <article id=""list>
             
             <div class="column">
                 <p>
                     List 1
                 </p>
-                <ul>
+                <ol type="i" reversed start="40">
                     <li>Item 1</li>
                     <li>Item 2</li>
                     <li>Item 3</li>
-                </ul>
+                </ol>
             </div>
 
             <div class="column">
@@ -85,7 +141,7 @@
                 <p>
                     List 3
                 </p>
-                <ul>
+                <ul class=" ls3" >
                     <li>Item 1</li>
                     <li>Item 2</li>
                     <li>Item 3</li>
