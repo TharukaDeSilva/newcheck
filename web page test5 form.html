@@ -15,10 +15,55 @@
     <form action="/submit" method="post" name="testingform" accept-charset="UTF-8">
         <h4>User Infromations</h4>
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="fname" required="" placeholder="Enter your name"><br/><br/>
+        <input type="text" id="fname" name="fname" required placeholder="Enter your name"><br/><br/>
         Last Name
-        <input type="text" id="lname"  name="lname" required="" placeholder="Enter your last name"><br/><br/>
-           <input type="submit" value="Submit">
+        <input type="text" id="lname"  name="lname" required placeholder="Enter your last name"><br/><br/>
+<p style="text-color: blue; font-weight: bold;">Gender Selection:</p>
+<label>Gender:</label>
+<label for="male">Male</label>
+
+        <input type="radio" id="male" name="gender" required value="male">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female">
+
+
+        <h3>Select the birthday: </h3>
+        <label for="bd"> Birthday: 
+            <input type="date" id="bd" name="bd"  min="1900-01-01" max="2033-12-31"><br/><br/> </label>
+        
+        City of the Birth:</form><br>
+        <label for="City"> City : </label>
+        <select name="City" id="City" >
+            <option value="" disabled>Select the city where were you born</option>
+            <option value="anuradhapura">Anuradhapura</option>
+            <option value="polonnaruwa">Polonnaruwa</option>
+            <option value="colombo">Colombo</option>
+            <option value="gampaha">Gampaha</option>
+            <option value="kaluthara">Kaluthara</option>
+            <option value="galle">Galle</option>
+            <option value="matara">Matara</option>
+            <option value="hambantota">Hambantota</option>
+            <option value="jaffna">Jaffna</option>
+            <option value="vavuniya">Vavuniya</option>
+            <option value="trincomalee">Trincomalee</option>
+            <option value="ampara">Ampara</option>
+            <option value="badulla">Badulla</option>
+        </select>
+<br><br>
+        <textarea name="userComments" id="usercmnt" rows="4" cols="40" placeholder="Enter your coments here"></textarea>
+        <br>
+
+        <label for="country">Country : </label>
+        <input list="countrylist">
+        <datalist id="countrylist">
+            <option value="Sri Lanka">
+            <option value="India">
+            <option value="Pakistan">
+            <option value="USA">
+            <option value="austrailia">
+        </datalist>
+        <br>
+        <input type="submit" value="Submit">
 
     </form>
 </main>
