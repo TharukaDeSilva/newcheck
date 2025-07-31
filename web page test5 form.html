@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form and data entry</title>
+ <style>
+        /* Applying the animation to the <p> tag */
+        p {
+            animation-duration: 3s; /* Time for one cycle */
+            animation-name: slide-in; /* Name of the animation */
+            animation-iteration-count: infinite; /* Animation repeats indefinitely */
+            animation-direction: alternate; /* Alternate the direction of the animation */
+        }
+
+        /* Keyframes for slide-in effect */
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%); /* Start from the left */
+            }
+            100% {
+                transform: translateX(100%); /* Move to the right */
+            }
+        }
+    </style>
+    
 </head>
 <body>
 <header>
