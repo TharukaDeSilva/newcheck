@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Java script intro</title>
-</head>
-<body>
-    <header><h1>Java script Introduction</h1></header>
+  </head>
+  <body>
+    <header><h1 class="intro">Java script Introduction</h1></header>
     <article>
-        <script>
-            console.log("Hello, World!");
-            document.write("<h6>Welcome to JavaScript!</h6>");
+      <p id="intro">Changing the content</p>
+      <script>
+        console.log("Hello, World!");
+        document.write("<h6>Welcome to JavaScript!</h6>");
+        document.write("<p>This is a simple JavaScript introduction.</p>");
 
-        </script>
+        function myFunc(color) {
+          document.body.style.backgroundColor = color;
+          document.getElementById("intro").innerHTML = "JavaScript is fun!";
+        }
+      </script>
+      
+      <button type="button" onclick="alert('Button clicked!') & myFunc('lightblue')">
+        Change content
+      </button>
     </article>
-</body>
+  </body>
 </html>
