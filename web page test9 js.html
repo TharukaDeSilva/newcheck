@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java script intro</title>
+  </head>
+  <body>
+    <header><h1 class="intro">Java script Introduction</h1></header>
+    <article>
+      <p id="intro">Changing the content</p>
+      <script>
+        console.log("Hello, World!");
+        document.write("<h6>Welcome to JavaScript!</h6>");
+        document.write("<p>This is a simple JavaScript introduction.</p>");
+
+        function myFunc() {
+
+          var red  = Math.random(20)*100;
+          var green  = Math.random()*100;
+          var blue = Math.random()*100;
+          document.body.style.backgroundColor = 'rgb(33,34, 200)';
+          document.getElementById("intro").innerHTML = "JavaScript is fun!";
+        }
+      </script>
+      
+      <button type="button" onclick="alert('Button clicked!') & myFunc()">
+        Change content
+      </button>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>output</title>
+</head>
+<body>
+
+    <h1>Adding bar and box</h1>
+    <form oninput="res.value = parseInt(maths.value) + parseInt(science.value) + parseInt(english.value)">
+
+        <label for="maths"> Maths = </label>
+        <input type="number" id="maths" name = "maths" value="50" ><br>
+        <br>
+        <label >Science = 
+            <input type="number" name="science" value="50" >
+        </label>
+        <br>
+        <br>
+        <label for="english"> English = </label>
+        <input type="range" id="english" name="english" value="30" ><br>
+        <br>
+        <br>
+        Results : <output name= "res" ></output>
+    </form>
+
+</body>
+</html>
