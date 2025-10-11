@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen transition-colors duration-300">
+    <div class="flex items-center justify-center min-h-screen">
+        <button 
+            id="colorButton"
+            class="px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 shadow-lg transform hover:scale-105 transition-all"
+            onclick="changeBackground()">
+            Change Background Color
+        </button>
+    </div>
+
+    <script>
+        function changeBackground() {
+            const colors = ['bg-red-500', 'bg-blue-500', 'bg-green-500', 'bg-yellow-500', 'bg-purple-500'];
+            const body = document.body;
+            
+            // Remove previous background color classes
+            colors.forEach(color => body.classList.remove(color));
+            
+            // Add random new color
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            body.classList.add(randomColor);
+        }
+    </script>
+</body>
+</html>
