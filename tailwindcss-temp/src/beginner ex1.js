@@ -113,6 +113,7 @@ function decre() {
   if (disMain >= 0) {
     document.getElementById("counter").innerHTML = disMain;
     document.getElementById("counter-dec").innerHTML = disDec;
+    document.getElementById("btnDec").style.backgroundColor = randomColor();
   } else {
     alert("Counter limit reached");
   }
