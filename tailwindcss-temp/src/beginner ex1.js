@@ -92,8 +92,8 @@ function randomColor() {
 }
 
 function incre() {
-  disMain = disMain + 1;
-  disInc = disInc + 1;
+  disMain += 1;
+  disInc += 1;
 
   document.body.style.backgroundColor = randomColor();
 
@@ -105,16 +105,19 @@ function incre() {
   }
 }
 
+// Decrement function to decrease the counter value and update the display
 function decre() {
-  disMain = disMain - 1;
-  disDec = disDec + 1;
+  disMain -= 1;
+  
   document.body.style.backgroundColor = randomColor();
 
   if (disMain >= 0) {
+    disDec += 1;
     document.getElementById("counter").innerHTML = disMain;
     document.getElementById("counter-dec").innerHTML = disDec;
     document.getElementById("btnDec").style.backgroundColor = randomColor();
   } else {
+    disMain = 0; // Reset to 0 if it goes below
     alert("Counter limit reached");
   }
 }
