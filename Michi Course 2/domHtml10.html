@@ -21,9 +21,13 @@
 
     <button id="interval">Make Intervals</button>
 
+    <button id="cancel">Clear interval</button>
+
     <script>
       const btn = document.querySelector("button");
       const btnInt = document.querySelector("#interval");
+      const btn_cancel = document.querySelector('#cancel');
+
 
       function onClick() {
         console.log("Before Start the Timer");
@@ -31,22 +35,28 @@
         function timerDone() {
           console.log("Timer is done!");
           btn.removeEventListener("click", onClick);
+          
         }
-
         setTimeout(timerDone, 3000);
+
+        
       }
 
 
       function interval(event){
-        setInterval(() =>{
+       const interval =  setInterval(() =>{
             console.log(event);
             console.log("Interval is over")
-        }, 4000)
+        }, 1000)
+        btn_cancel.addEventListener('click', ()=>{
+        clearInterval(interval)
+      })
       }
 
 
       btnInt.addEventListener('click', interval);
       btn.addEventListener("click", onClick);
+      
     </script>
   </body>
 </html>

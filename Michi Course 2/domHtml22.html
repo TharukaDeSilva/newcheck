@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOvieDataBase API</title>
+</head>
+<body>
+    <script>
+        const base_url = "http://www.omdbapi.com/?";
+        const parameters  = new URLSearchParams({
+            t:"fast and furious 2",
+            apikey : "ca584b94"
+        });
+        
+
+        fetch(base_url+parameters.toString()).then((respon)=>{
+            return respon.json()
+        }).then((result)=>{
+            console.log(result)
+        })
+
+    </script>
+    
+</body>
+</html>

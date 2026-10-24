@@ -15,7 +15,7 @@ function fakeFetch(url){
 
 
 fakeFetch('book.txt').then((response)=>{
-  console.log('status'+ response.status);
+  console.log('status '+ response.status);
   console.log('url : '+ response.url);
   return response.text();
 }).then((txt)=>{

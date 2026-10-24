@@ -25,5 +25,7 @@ for (let i = 0; i < products.length; i++) {
     total = total + product.price;
     cartTotal.textContent= "Total: $" + total;
   });
+
+  
   productList.append(btn);
 }

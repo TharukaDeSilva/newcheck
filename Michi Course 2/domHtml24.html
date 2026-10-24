@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combining Promises</title>
+</head>
+<body>
+    <button>Fetch</button>
+    <script>
+        // define the buttons and events
+        const btn  = document.querySelector('button');
+        const search_term = 'inception';
+
+        //settup the omdb api and their functions
+        const OMDB_BASE_URL = "https://www.omdbapi.com/?";
+        const omdb_params = new URLSearchParams({
+            
+            t: search_term,
+            apikey : "ca584b94"
+        });
+
+
+        const OMDB_URL = OMDB_BASE_URL + omdb_params.toString();
+
+
+        // setup the datamuse api and there functionality
+        const DATAMUSE_BASE_URL = "https://api.datamuse.com/words?";
+        const datamuse_params = new URLSearchParams();
+        datamuse_params.set("ml", search_term);
+
+        const DATAMUSE_URL  = DATAMUSE_BASE_URL + datamuse_params.toString();
+        
+
+        Promise.all([fetch(OMDB_URL), fetch(DATAMUSE_URL)]).then((results)=>{
+            
+            return Promise.all([results[0].json(), results[1].json()])
+        }).then((data)=>{
+            const omdbResponse  = data[0];
+            const dataMuseResponse = data[1];
+
+            console.log(omdbResponse);
+            console.log(dataMuseResponse);
+        })
+
+
+    </script>
+    
+</body>
+</html>
